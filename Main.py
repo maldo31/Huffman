@@ -1,3 +1,24 @@
+class node:
+    def __init__(self, freq, symbol, left=None, right=None):
+        self.freq = freq
+        self.symbol = symbol
+        self.left = left
+        self.right = right
+        self.huff = ''
+
+
+def printNodes(node, val=''):
+    # huffman code for current node
+    newVal = val + str(node.huff)
+    # if node is not an edge node
+    # then traverse inside it
+    if (node.left):
+        printNodes(node.left, newVal)
+    if (node.right):
+        printNodes(node.right, newVal)
+    if (not node.left and not node.right):
+        print(f"{node.symbol} -> {newVal}")
+
 def readFromFile(path):
     f = open(path,"r")
     read=f.read()
