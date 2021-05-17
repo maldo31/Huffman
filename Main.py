@@ -84,13 +84,12 @@ def prepare_dict(dict):
     to_send=bytearray()
     for key in dict:
         to_send.append(ord(key))
-        if len(dict[key]) % 8 == 0:
-            hex = [dict[key][8 * i:8 * (i + 1)] for i in range(int(len(dict[key]) / 8))]
-        else:
-            hex = [dict[key][8 * i:8 * (i + 1)] for i in range(int(len(dict[key]) / 8) + 1)]
-        hex = [int(i, 2) for i in hex]
-        for h in hex:
-            to_send.append(h)
+        i=0
+        for char in dict[key]:
+            i+=1
+            print(i)
+            to_send.append(ord(char))
+
         to_send.append(255)
     to_send.append(255)
     to_send.append(255)
