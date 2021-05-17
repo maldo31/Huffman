@@ -62,26 +62,25 @@ def data_to_extract(data, dict):
             temp_code = ''
     return text
 
+def recieve_data(codedpath,decodedpath,ip,port):
+    port = int(port)
+    sock = socket.socket()
+    sock.bind((ip, int(port)))
+    sock.listen()
+    conn, addr = sock.accept()
+    print('Połączono:', addr)
+    rec_data = recvall(conn)
+    rec_dict = create_dict(rec_data)
+    extracted = data_to_extract(rec_data, rec_dict)
 
-port = 9090
+    print("ODEBRANY SLOWNIK\n")
+    print(rec_dict)
+    print(extracted)
 
-sock = socket.socket()
-sock.bind(('', int(port)))
-sock.listen()
-conn, addr = sock.accept()
-
-print('Połączono:', addr)
-rec_data = recvall(conn)
-rec_dict = create_dict(rec_data)
-extracted = data_to_extract(rec_data, rec_dict)
-
-print("ODEBRANY SLOWNIK\n")
-print(rec_dict)
-print(extracted)
-
-f = open("odbior_ZAKODOWANY.txt", "wb")
-f.write(rec_data)
-f.close()
-f = open("odbior_ODKODOWANY.txt", "w")
-f.write(extracted)
-f.close()
+    f = open(codedpath, "wb")
+    f.write(rec_data)
+    f.close()
+    f = open(decodedpath, "w")
+    f.write(extracted)
+    f.close()
+    return 0

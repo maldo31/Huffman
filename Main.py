@@ -88,7 +88,7 @@ def prepare_dict(dict):
         i=0
         for char in dict[key]:
             i+=1
-            print(i)
+            # print(i)
             to_send.append(ord(char))
 
         to_send.append(255)
@@ -114,7 +114,7 @@ def send(readpath,savepath,ip,socket):
     # print("\n\n\nSŁOWNIK W BITACH=\n")
     coded_dict=prepare_dict(kodowanie)
     # print(prepare_dict(kodowanie))
-    # print_Table(dictionary,kodowanie)
+    print_Table(dictionary,kodowanie)
     coded=encode_text(file,kodowanie)
     #
     text_zakodowany=convert_text_to_bytes(coded)
@@ -125,4 +125,5 @@ def send(readpath,savepath,ip,socket):
     f = open(savepath, "wb")
     f.write(final)
     f.close()
+    return 0
 
