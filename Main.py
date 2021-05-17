@@ -19,7 +19,7 @@ def count_occurance(text):
     return dict
 
 
-# Creating tree nodes
+# Tworzenie drzewa
 class NodeTree(object):
 
     def __init__(self, left=None, right=None):
@@ -36,7 +36,7 @@ class NodeTree(object):
         return '%s_%s' % (self.left, self.right)
 
 
-# Main function implementing huffman coding
+# Funkcja używająca drzewa do implementacji kodowania huffmana
 def huffman_code_tree(node, left=True, binString=''):
     if type(node) is str:
         return {node: binString}
@@ -67,7 +67,6 @@ def print_Table(freq,huffmanCode):
 def encode_text(text,huffmanCode):
     codedmessage=''
     for char in text:
-        # print(char)
         codedmessage+=huffmanCode[char]
     return codedmessage
 
@@ -126,10 +125,4 @@ send_data(final)
 f = open("sample.txt", "wb")
 f.write(final)
 f.close()
-# counted=sum(dictionary.values())
-# print(file)
-# print("\n")
-# print(dictionary)
-# print(sorted)
-# print(counted)
 
