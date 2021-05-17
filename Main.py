@@ -1,5 +1,7 @@
 import socket
 
+
+
 def readFromFile(path):
     f = open(path,"r")
     read=f.read()
@@ -98,31 +100,29 @@ def final_message(dict,text):
     final =dict+text
     return final
 
-def send_data(data,ip='localhost',port=9090):
+def send_data(data,ip='localhost',port=10000):
     sock=socket.socket()
     sock.connect((ip,int(port)))
     print("Połączono z:"+str(ip)+str(port))
     sock.send(data)
 
-file = readFromFile("hamlet.txt")
-dictionary=count_occurance(file)
-kodowanie=create_huffman_dict(dictionary)
-print(kodowanie)
-print("\n\n\nSŁOWNIK W BITACH=\n")
-coded_dict=prepare_dict(kodowanie)
-
-print(prepare_dict(kodowanie))
-print_Table(dictionary,kodowanie)
-coded=encode_text(file,kodowanie)
-
-text_zakodowany=convert_text_to_bytes(coded)
-
-final=final_message(coded_dict,text_zakodowany)
-print(convert_text_to_bytes(coded))
-write_to_file("zakodwane.txt",coded)
-
-send_data(final)
-f = open("sample.txt", "wb")
-f.write(final)
-f.close()
+def send(readpath,savepath,ip,socket):
+    file = readFromFile(readpath)
+    dictionary=count_occurance(file)
+    kodowanie=create_huffman_dict(dictionary)
+    print(kodowanie)
+    # print("\n\n\nSŁOWNIK W BITACH=\n")
+    coded_dict=prepare_dict(kodowanie)
+    # print(prepare_dict(kodowanie))
+    # print_Table(dictionary,kodowanie)
+    coded=encode_text(file,kodowanie)
+    #
+    text_zakodowany=convert_text_to_bytes(coded)
+    final=final_message(coded_dict,text_zakodowany)
+    # print(convert_text_to_bytes(coded))
+    # write_to_file(savepath,coded)
+    send_data(final,ip,int(socket))
+    f = open(savepath, "wb")
+    f.write(final)
+    f.close()
 
