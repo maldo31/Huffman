@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3ed36e9-016f-407a-80fd-219d95d40754" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/SendGui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecGui.py" beforeDir="false" afterPath="$PROJECT_DIR$/RecGui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/huffmantest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kod.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recieve.py" beforeDir="false" afterPath="$PROJECT_DIR$/recieve.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zakodwane.txt" beforeDir="false" />
-    </list>
+    <list default="true" id="b3ed36e9-016f-407a-80fd-219d95d40754" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +31,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/recieve.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1631">
-              <caret line="81" column="81" selection-start-line="81" selection-start-column="81" selection-end-line="81" selection-end-column="81" />
+            <state relative-caret-position="1224">
+              <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -288,7 +277,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
+    <frame x="-8" y="-8" width="2576" height="1416" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.06107171" />
@@ -384,8 +373,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/recieve.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1631">
-          <caret line="81" column="81" selection-start-line="81" selection-start-column="81" selection-end-line="81" selection-end-column="81" />
+        <state relative-caret-position="1224">
+          <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
         </state>
       </provider>
     </entry>
